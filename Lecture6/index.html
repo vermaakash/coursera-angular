@@ -1,0 +1,20 @@
+<html ng-app="NameCalculatorApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.5em;} </style>
+    <title>Lecture2</title>
+  </head>
+  <body>
+    <h1>Low Cohesion And Tight Coupling</h1>
+    <div id="nameCalculator" ng-controller="NameCalculatorAppController">
+      <div>
+        Your name : <input type="text" ng-model="name" ng-keyup="displayNameValue()">
+      </div>
+      <div id="output">
+        The total value of the Name {{name}} is : {{totalValue}}
+      </div>
+    </div>
+  </body>
+</html>
