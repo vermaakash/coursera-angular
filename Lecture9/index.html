@@ -1,0 +1,17 @@
+<html ng-app="DIApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.5em;} </style>
+    <title>Lecture9</title>
+  </head>
+  <body>
+    <h1>DI Working</h1>
+    <div id="idDiv" ng-controller="DIController">
+      <div>
+        Name : <input type="text" ng-model="name" ng-blur="upper()">
+      </div>
+    </div>
+  </body>
+</html>
