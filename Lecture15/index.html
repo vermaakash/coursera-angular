@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.5em;} </style>
+    <title>Lecture15</title>
+  </head>
+  <body ng-app="CounterApp">
+    <div ng-controller="CounterController">
+      <div>
+          <button ng-click="upCounter()">Increment Counter</button>
+      </div>
+      <div>
+          Counter : {{counter}}
+      </div>
+    </div>
+  </body>
+</html>

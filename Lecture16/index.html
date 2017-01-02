@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.5em;} </style>
+    <title>Lecture16</title>
+  </head>
+  <body ng-app="BindingApp">
+    <div ng-controller="BindingController">
+      <div>
+          <input type="text" ng-model="firstName" />
+      </div>
+      <div>
+          <button ng-click="setFullName()">Set Fullname</button><br/>
+          FullName : {{::fullName}}
+      </div>
+      <div>
+          <button ng-click="logFirstName()">Log FirstName</button><br/>
+          <button ng-click="logFullName()">Log Fullname</button><br/>
+      </div>
+    </div>
+  </body>
+</html>
