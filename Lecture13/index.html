@@ -1,0 +1,19 @@
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.5em;} </style>
+    <title>Lecture13</title>
+  </head>
+  <body>
+    <div ng-controller="MsgController">
+      <div>
+        {{name}} has a message for you : <br>
+        Original : {{messageOfTheDay()}} </br>
+        LovesOriginal : {{messageWithLoves()}} <br>
+        LovesOriginalUppercasesd : {{messageOfTheDay() | custom : "likes" : "loves" | uppercase}}
+      </div>
+    </div>
+  </body>
+</html>

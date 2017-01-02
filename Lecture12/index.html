@@ -1,0 +1,24 @@
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.5em;} </style>
+    <title>Lecture12</title>
+  </head>
+  <body>
+    <h1>String Interpolation</h1>
+    <div ng-controller="MsgController">
+      <div>
+        {{name}} has a message for you : <br>
+        {{messageOfTheDay()}}
+        Cost is : {{ cost | currency}}
+        Custom Cost is : {{ customCost }}
+      </div>
+      <div>
+        <button type="button" ng-click="changeImage()">Change Image</button>
+        <img ng-src="images/{{currentImage}}.jpg">
+      </div>
+    </div>
+  </body>
+</html>
