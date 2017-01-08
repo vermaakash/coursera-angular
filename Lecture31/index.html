@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      body {font-size: 1.5em;}
+      .error {color: red; display: none;}
+    </style>
+    <title>Lecture31</title>
+  </head>
+  <body ng-app="ShoppingApp">
+    <div ng-controller="ShoppingAppController as ctrl">
+
+      <input type="text" ng-model="ctrl.newItemName" placeHolder="New Item Name"/>
+      <input type="text" ng-model="ctrl.newItemQuantity" placeholder="New Quantity Name"/>
+      <button type="button" ng-click="ctrl.addItem();">Add Item</button>
+
+      <shopping-list-description title="We are doing shopping here"
+                                 items="ctrl.items"
+                                 remove-method="ctrl.removeItem(index);">
+      </shopping-list-description>
+    </div>
+  </body>
+</html>
